@@ -22,7 +22,8 @@
 		"start:dev": "concurrently \"node mock\" \"set PORT=3020 && react-scripts start\"",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"format": "prettier --write"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -44,6 +45,7 @@
 	},
 	"devDependencies": {
 		"concurrently": "^5.3.0",
-		"node-mock-server": "^0.25.4"
+		"node-mock-server": "^0.25.4",
+		"prettier": "2.2.1"
 	}
 }
