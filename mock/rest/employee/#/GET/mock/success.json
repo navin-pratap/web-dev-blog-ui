@@ -1,0 +1,14 @@
+{
+	"data": [
+		{
+			"fullName": "Navin Pratap",
+			"rollNumber": 1001,
+			"marks": 95
+		},
+		{
+			"fullName": "Rashmi Tiwari",
+			"rollNumber": 1002,
+			"marks": 99
+		}
+	]
+}
