@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Box, Typography } from '@material-ui/core';
 // import { connect } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
@@ -22,13 +23,14 @@ interface EmployeeProps {
 
 const Employee = (props: EmployeeProps) => {
 	const { listMasterDataResult } = props;
+	const { t } = useTranslation();
 	const classes = useStyles();
 	// console.log(listMasterDataResult);
 
 	return (
 		<Box>
 			<Typography variant='h4' color='primary'>
-				Employee Details
+				{`Employee Details - ${t('AppName')}`}
 			</Typography>
 			{Boolean(listMasterDataResult) && listMasterDataResult.length ? (
 				<TableContainer component={Paper}>
