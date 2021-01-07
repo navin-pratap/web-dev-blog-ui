@@ -1,14 +1,16 @@
 {
 	"data": [
 		{
-			"fullName": "Navin Pratap",
-			"rollNumber": 1001,
-			"marks": 95
+			"name": "S1 Mock",
+			"key": "S1 Mock"
 		},
 		{
-			"fullName": "Rashmi Tiwari",
-			"rollNumber": 1002,
-			"marks": 99
+			"name": "S2 Mock",
+			"key": "S2 Mock"
+		},
+		{
+			"name": "S3 Mock",
+			"key": "S3 Mock"
 		}
 	]
 }

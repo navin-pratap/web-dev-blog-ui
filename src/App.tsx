@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Box, Typography, Button } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { showLoader, getMasterData } from './action/common';
+import { showLoader, getMasterData, getMockMasterData } from './action/common';
 import Employee from './components/Employee';
 
 export interface AppProps {
@@ -10,6 +10,7 @@ export interface AppProps {
 	listMasterDataResult: any;
 	showLoader: (status: any) => {};
 	getMasterData: (data: any) => {};
+	getMockMasterData: (data: any) => {};
 }
 
 export interface AppState {}
@@ -35,6 +36,9 @@ class App extends Component<AppProps, AppState> {
 					<Button color='secondary' onClick={() => props.getMasterData({ test: 'a' })}>
 						Click Me for API call!!
 					</Button>
+					<Button color='secondary' onClick={() => props.getMockMasterData({ test: 'a' })}>
+						Click Me for Mock API call!!
+					</Button>
 					<Employee listMasterDataResult={props.listMasterDataResult} />
 				</Box>
 			</Box>
@@ -51,6 +55,7 @@ const mapDispatchToProps = (dispatch: any) =>
 		{
 			showLoader,
 			getMasterData,
+			getMockMasterData,
 		},
 		dispatch
 	);
