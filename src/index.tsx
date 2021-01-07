@@ -6,12 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store/index';
 
+const props: any = {};
 ReactDOM.render(
-	<Provider store={store}>
-		<React.StrictMode>
-			<App />
-		</React.StrictMode>
-	</Provider>,
+	<React.StrictMode>
+		<Provider store={store}>
+			<App {...props} />
+		</Provider>
+	</React.StrictMode>,
 	document.getElementById('root')
 );
 
